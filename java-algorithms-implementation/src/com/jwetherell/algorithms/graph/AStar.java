@@ -53,7 +53,6 @@ public class AStar<T extends Comparable<T>> {
         for (Graph.Vertex<T> v : graph.getVertices())
             fScore.put(v, Integer.MAX_VALUE);
         fScore.put(start, heuristicCostEstimate(start,goal));
-	System.out.println(heuristicCostEstimate(start,goal));
 
         final Comparator<Graph.Vertex<T>> comparator = new Comparator<Graph.Vertex<T>>() {
             /**
